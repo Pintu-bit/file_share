@@ -1,0 +1,73 @@
+<!doctype html>
+ <html>
+ <head> 
+<meta charset="UTF-8" >
+<script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+ <style type="text/css">
+   div{
+      position:relative;
+     top:100px;
+     left:600px;
+      transform:translate(-50%,-50%);
+    }
+  button 
+  {
+    width:300px;
+    padding:10px 40px;
+  background:#025d05;
+  border:none;
+ border-radius:5px;
+ font-size:15px;
+  color:#fff;
+  text-transform: uppercase;
+   font-weight: bold;
+  }
+i
+{
+ margin-right:10px; 
+} 
+span
+{
+  color:#7d7d7d;
+  font-weight:bold; 
+}
+
+</style>
+</head>
+ <body>
+<div id="div" >
+  <form action="test.php" method="post" enctype="multipart/form-data">
+    <input type="file" id="file" hidden name="file"/>
+ <button type="button" id="costem-btn" id="button"> 
+   <i class="fa fa-cloud-upload" id="i" ></i>
+      upload file 
+ </button>
+ <input type="submit" />
+  <!--<span id="costem-text">No file Chosen yet,</span>-->
+</form>
+ </div>
+<script>
+ var realFile=document.getElementById("file");
+ var costBtn=document.getElementById("costem-btn");
+ var costText=document.getElementById("costem-text"); 
+  costBtn.addEventListener('click',function()
+  {
+     realFile.click();
+  })
+realFile.addEventListener('change',function()
+ {
+   if(realFile.value)
+   {
+      var filename=realFile.value.match(/\n# $&:\n\t/);
+        var a=realFile.value; 
+       console.log(a);
+               costBtn.innerHTML=realFile;
+  }
+ else
+   {
+     costText.innerHTML="Not file";
+   }
+});
+</script>
+</body>
+</html>
