@@ -66,20 +66,6 @@ upload file
   {
      realFile.click();
   })
-/*realFile.addEventListener('change',function()
- {
-    var realFile=document.getElementById("file");
-   if(realFile.value)
-   {
-      var realFile=realFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+$/);
-       console.log(realFile);
-      //costBtn.innerHTML="file uploaded";
-  }
- else
-   {
-     costText.innerHTML="Not file";
-   }
-});*/
 
 </script>
 <?php
